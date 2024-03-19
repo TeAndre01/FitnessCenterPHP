@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Registration Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,7 +13,7 @@
         }
 
         form {
-            width: 300px;
+            width: 500px;
             margin: 0 auto;
             background-color: #fff;
             padding: 20px;
@@ -44,18 +44,28 @@
 </head>
 <body>
 
-<form action="login_process.php" method="post">
-    <h2>Login</h2>
-    <label for="username">Username:</label>
+<form action="registration_process.php" method="post">
+    <h2>Registration</h2>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="username">Preferred Username:</label>
     <input type="text" id="username" name="username" required>
 
     <label for="password">Password:</label>
     <input type="password" id="password" name="password" required>
 
-    <button type="submit">Login</button>
-</form>
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required>
 
-<p>Don't have an account? <a href="registration.php">Register here</a></p>
+    <button type="submit">Register</button>
+</form>
 
 </body>
 
